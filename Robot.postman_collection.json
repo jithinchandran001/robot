@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "00e60ef7-e9d5-4b41-a170-dc01f6256763",
+		"name": "Robot",
+		"description": "APIs for Robot Apocalypse",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Survivors",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\n\t\"name\":\"jithin\",\n\t\"gender\":\"m\",\n\t\"longitude\":\"231241.23432\",\n\t\"latitude\":\"34235423.23423\",\n\t\"resources\":[\n\t\t{\n\t\t\t\"resource_name\":\"water\",\n\t\t\t\"quantity\":\"10\",\n\t\t\t\"unit\":\"litre\"\n\t\t},{\n\t\t\t\"resource_name\":\"medicine\",\n\t\t\t\"quantity\":\"10\",\n\t\t\t\"unit\":\"count\"\n\t\t}\n\t]\n}]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/api/survivor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"survivor"
+					]
+				},
+				"description": "Add survivors to DB"
+			},
+			"response": []
+		},
+		{
+			"name": "update infected survivor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":3,\n\t\"infected\":true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/api/survivor/infected",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"survivor",
+						"infected"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update_survivor_location",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":3,\n\t\"longitude\":\"231241.00001\",\n\t\"latitude\":\"34235423.0002\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/api/survivor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"survivor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Survivor List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/api/survivor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"survivor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Robot List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/api/robot",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"robot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Report",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/api/report",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"report"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Survivor by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/api/survivor/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"survivor",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
